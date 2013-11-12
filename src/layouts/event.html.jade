@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+div#leader.bar(style='background-image: url(\"img/coding_vibrant_cyan.jpg\")')
+    div.wrap
+        h2
+            a(href='http://tjhackathon.com') 137 High Schoolers. <br/>24 Hours.
+        a(href='http://tjhackathon.com'): span The largest high school hackathon. Ever.
+
+#content
+    .box.white.eventshome
+        .wrap
+            h3 hi
+            !=getCollection('events')
+            h3 Upcoming Events
+            h4 Oct. 12-13, 2013
+            h2: a(href='http://sf.gopilot.org') San Francisco
+            h4 Nov. 9-10, 2013
+            h2: a(href='http://philly.gopilot.org') Philadelphia
+            h4 To Be Announced (Early 2014)
+            h2: a(href='http://eepurl.com/Frikz') Washington DC
+            h4 To Be Announced
+            h2: a(href='http://eepurl.com/FrjKP') Boston 
+
+    .box.grey
+        .wrap
+            h1 It's a whole new system. Coming soon.
+
+    .box.white.sponsors
+        .wrap
+            h3 Event Sponsors
+            ul
+                li
+                    a(href='http://facebook.com'): img(src='img/facebook.png')
+                li
+                    a(href='http://palantir.com'): img(src='img/palantir.png')
+                li
+                    a(href='http://aws.amazon.com'): img(src='img/aws.png')
+                li
+                    a(href='http://gomodev.com'): img(src='img/modev.png')
+
+            
+    
+
+
+

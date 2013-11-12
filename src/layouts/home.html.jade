@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+div#leader.bar(style='background-image: url(\"img/coding_vibrant_cyan.jpg\")')
+    div.wrap
+        h2
+            span.highlight What can you build in a day?
+        h4
+            a.highlight(href='/events') Find out at Pilot >
+
+    
+
+#content
+    .box.white.eventshome
+        .wrap
+            h3.tleft Upcoming Events
+             each post in getCollection('documents').findAll({relativeOutDirPath: 'events', date: {'$gt': new Date()}}).toJSON()
+                h4= post.occurs
+                h2: a(href=post.link)= post.title
+
+    .box.grey.sponsors
+        .wrap
+            h3 Event Sponsors
+            ul
+                li
+                    a(href='http://facebook.com'): img(src='img/facebook.png')
+                li
+                    a(href='http://palantir.com'): img(src='img/palantir.png')
+                li
+                    a(href='http://aws.amazon.com'): img(src='img/aws.png')
+                li
+                    a(href='http://gomodev.com'): img(src='img/modev.png')
+
+            
+    
+
+

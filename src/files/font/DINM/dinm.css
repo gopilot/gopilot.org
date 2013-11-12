@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DIN';
+    font-weight: 400;
+    src: url('dinm____.eot');
+    src: url('dinm____.eot') format('embedded-opentype'),
+         url('dinm____.woff') format('woff'),
+         url('dinm____.ttf') format('truetype'),
+         url('dinm____.svg#DINMediumRegular') format('svg');
+}

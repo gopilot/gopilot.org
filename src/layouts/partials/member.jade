@@ -1,0 +1,14 @@
+.person
+    .info
+        h3= person.name
+        if person.regional
+            h4= person.title +", asdf" + person.where
+        else
+            h4= person.title 
+
+    img(src="/img/team/"+person.image)
+    .bio
+        p
+            !{person.content}
+
+

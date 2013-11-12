@@ -1,0 +1,501 @@
+@import 'nib'
+@import '_settings.css.styl'
+@import '../font/DINL/dinl.css'
+@import '../font/DINM/dinm.css'
+@import '../font/Arvil/stylesheet.css'
+
+global-reset()
+base()
+
+/////////////////
+// Semantic.gs // for Stylus: http://learnboost.github.com/stylus/
+/////////////////
+
+// Defaults which you can freely override
+column-width = 60px
+gutter-width = 30px
+columns = 12
+
+// Utility variable — you should never need to modify this
+_gridsystem-width = (column-width + gutter-width) * columns
+
+// Set @total-width to 100% for a fluid layout
+total-width = 100%
+
+// Correcting percentage-to-pixel rounding errors in IE6 & 7
+// See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+// Override @min with the minimum width of your layout
+min-width = 960
+correction = (((0.5 / min-width) * 100) * 1%)
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+clearfix()
+ *zoom:1
+
+	&:before,
+	&:after
+		content:""
+		display:table
+
+	&:after
+		clear:both
+
+
+//////////
+// GRID //
+//////////
+
+body
+	width 100%
+	clearfix()
+
+row(columns = columns)
+	display block
+	width total-width * ((gutter-width + _gridsystem-width ) / _gridsystem-width)
+	margin 0 total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)
+	*width total-width * ((gutter-width + _gridsystem-width ) / _gridsystem-width)-correction
+	*margin 0 total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)-correction
+
+column(x, columns = columns)
+	display inline
+	float left
+	overflow hidden
+	width total-width * ((((gutter-width + column-width ) * x) - gutter-width) / _gridsystem-width)
+	margin 0 total-width * ( (gutter-width * 0.5) / _gridsystem-width)
+	*width total-width * ((((gutter-width + column-width ) * x) - gutter-width) / _gridsystem-width)-correction
+	*margin 0 total-width * ( (gutter-width * 0.5) / _gridsystem-width)-correction
+
+offset(offset = 1)
+	margin-left total-width*(((gutter-width+column-width)*offset + (gutter-width*0.5))/_gridsystem-width)
+
+skyblue=#1C9BE6
+body
+    font-family "DIN"
+    font-weight 100
+    line-height 1.6
+    font-size 22px
+    color #242424
+
+a
+    color skyblue
+    text-decoration none
+    transition: color .1s
+
+    &:hover
+        color #242424
+
+h1
+    font-size 97px
+    line-height 126px
+    font-weight normal
+
+
+h2
+    font-size 97px
+    line-height 126px
+    font-weight normal
+    text-transform uppercase
+    margin 0
+
+h3 
+    font-family "DIN"
+    font-size 41px
+    font-weight 200
+    margin-bottom .4em
+
+h3,h4
+    font-weight 200
+
+p
+    font-family "DIN"
+
+.wrap
+    margin 0 0px 0 300px
+    max-width 1080px
+    clearfix()
+
+.large
+    font-size 34px
+    margin 0px auto
+
+.center
+    text-align center
+
+.uppercase
+    text-transform uppercase
+
+header
+    header_color = blue
+    background-size cover
+    padding-top 30px
+    position fixed
+    z-index 2
+    top 20px
+    left 40px
+    width 200px
+    h1
+        text-indent -9999px
+        margin 0px 0 0 0
+        background url('/img/arc_blue.png') top center no-repeat
+        background-size contain
+        position relative
+        z-index 34
+
+        a
+            width 230px
+            height 120px
+            margin 0px auto !important
+            position relative
+            z-index 10
+            display block
+
+    #navbar
+        height auto
+        position relative
+        text-align center
+        padding-top 4px
+
+    nav
+        position relative
+        z-index 2
+        width 131px
+        text-align center
+        margin 0px auto
+        padding-bottom 1px
+        margin-top -10px
+
+        a
+            color blue
+            font-family DIN
+            text-transform uppercase
+            background rgba(255,255,255,.8)
+            font-size 17px
+            padding 10px 0 8px 0
+            display block
+            transition all .3s
+
+            &:first-child
+                padding-top 20px
+
+            &:hover
+                background white
+                color black
+
+        .social
+            clearfix()
+            a
+                padding 5px 0 
+                filter grayscale(1)
+                -webkit-filter grayscale(1)
+                box-sizing border-box
+                text-indent -9999px
+                width 50%
+                border 0px
+                float right
+                background rgba(255,255,255,.6) url('/img/social_twitter.png')
+                background-size 27px 20px
+                background-repeat no-repeat
+                background-position center center
+                transition all .1s
+
+                &:hover
+                    filter grayscale(0)
+                    -webkit-filter grayscale(0)
+                    background-color white
+
+            .fb
+                background-image url('/img/social_fb.png')
+                background-size 20px 20px
+                float left
+
+.headerwrap
+    .blurredwrap
+        position fixed
+        width 132px
+        overflow hidden
+    .content-blurred
+        position: absolute
+        top: 0px 
+        left: 0px
+
+        .container
+            background white
+            filter: blur(5px)
+            -webkit-filter:blur(5px)
+
+
+#leader
+    padding-top 110px
+    padding-right 40px
+    padding-bottom 30px
+    min-height 360px
+    background-position center center
+    background-size cover
+    text-transform uppercase
+
+    a, .highlight
+        background white
+        font-size inherit
+        text-transform uppercase
+        color blue
+
+    h2
+        a
+            padding 0px
+
+    a
+        padding 5px
+
+    span
+        font-size 24px
+        text-transform none
+
+.box
+    background-size cover
+    background-position center center
+    padding 50px 0 50px 0
+    h3:first-child
+        margin-top 0
+    &.white
+        h1
+            margin-top 15px
+            text-transform uppercase
+            a
+                color white
+                background skyblue
+
+
+    &.grey
+        background grey1
+
+    &.dark
+        background grey2
+        color white
+
+    &.blue
+        background blue
+        color white
+
+.content
+    column 8
+
+aside
+    column 4
+    font-size 19px
+
+    h4
+        font-size 24px
+        font-weight 400
+        margin-top .7em
+
+.people
+    margin-top 2em
+    clear both
+.person
+    clearfix()
+    width 50%
+    float left
+    position relative
+    margin-top 40px
+    padding 0 15px
+    box-sizing border-box
+
+    &:nth-child(2n+1)
+        clear both
+
+    .bio
+        font-size 18px
+        margin-left 170px
+        margin-top 20px
+
+    img
+        width 150px
+        margin-top 15px
+        float left
+    h3
+        margin-bottom 0
+        font-size 30px
+        text-align center
+    h4
+        text-transform uppercase
+        font-size 16px
+        text-align center
+        margin-top -10px
+        border-bottom 1px solid grey1
+        padding-bottom 5px
+        margin-bottom 10px
+
+
+
+
+div.image-bg
+    width 200%
+    height 200%
+    position absolute 
+    top -50%
+    left -50%
+
+    img
+        min-width 50%
+        min-height 50%
+        max-width 100%
+        max-height 100%
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        margin auto
+
+
+.sponsors
+
+    ul,li 
+        list-style none
+        padding 0
+        margin 0
+
+    li
+        width 49%
+        display inline-block
+        height 140px
+        margin-bottom 20px
+
+    a
+        display block
+        width 80%
+        margin 0px auto
+        &:hover
+            img
+                -webkit-filter grayscale(0)
+                opacity 1
+        img 
+            width 100%
+            filter grayscale(1)
+            -webkit-filter grayscale(1)
+            opacity .6
+            transition all .2s
+
+            
+
+
+.involvetype
+    column 6
+    box-sizing border-box
+    padding-right 30px
+    margin-bottom 50px
+    clearfix()
+
+    h4
+        text-transform uppercase
+        font-size 59px
+        margin-top 0
+        font-weight 400
+        margin-bottom 0
+
+    h5
+        font-size 35px
+        font-weight 200
+        margin-bottom 18px
+        margin-top 0
+
+
+    a
+        text-transform uppercase
+        font-weight 400
+.box.head
+    padding 20px 0 1px 0
+    h3
+        margin 0px 0 20px 0
+
+.eventshome
+    h4
+        margin-bottom -20px
+        margin-top 40px
+        font-weight 400
+    h2
+        margin-top 0
+
+.event
+    margin-bottom 5px
+    padding 0 0 60px 0
+    h4
+        margin-bottom 30px
+        margin-top 50px
+
+    h4, p
+        color white
+        font-weight 400
+        text-shadow 0 0 8px black
+
+    p
+        margin-top 0
+    h2
+        margin-top 0
+        font-family ArvilSans
+
+        a
+            padding 0px 5px 0 5px
+            font-size 160px
+            background white
+
+            span
+                background transparent
+
+
+@media (max-width: 800px)
+    .blurredwrap
+        display none
+    .wrap
+        margin-left 0
+        padding-left 10px
+        padding-right 10px
+    .content, aside, .involvetype
+        column(12)
+        float none
+
+
+    h1, h2
+        font-size 43px
+        line-height 60px
+
+    #leader
+        padding-top 40px
+        min-height 200px
+
+    header
+        position static
+        padding-top 10px
+        width 100%
+        h1
+            margin 0px auto
+            margin-top 0px
+            width 100px
+            line-height 1
+
+            a
+                width 100%
+                height 80px
+
+        nav
+            width 100%
+            a
+                display inline
+                padding 0 6px
+                font-size 14px
+
+    .sponsors li
+        height 50px
+
+    .event
+        h2
+            a
+                font-size 80px
+
+    .people
+        >div
+            margin-top 20px
+            column 12
+
+
+

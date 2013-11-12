@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+#content.events
+    .box.white.head
+        .wrap
+            h3 Upcoming Events
+
+
+    each post in getCollection('documents').findAll({relativeOutDirPath: 'events', date: {'$gt': new Date()}}).toJSON()
+        - var bg = "background-image: url('/img/"+post.image+"')"
+        .box.white.event(style=bg)
+            .wrap
+                h4= post.occurs
+                h2: a(href=post.link)= post.title
+    .box.white.head
+        .wrap
+            h3 Past Events
+    each post in getCollection('documents').findAll({relativeOutDirPath: 'events', date: {'$lt': new Date()}}).toJSON()
+        - var bg = "background-image: url('/img/"+post.image+"')"
+        .box.white.event(style=bg)
+            .wrap
+                h4= post.occurs
+                h2: a(href=post.link)= post.title
+
+    .box
+        .wrap
+            .content
+                h3 Don't see an event near you?
+                p <a href="mailto:fly@gopilot.org">Send us an email</a> telling us where you are, and we'll see what we can do.
+
