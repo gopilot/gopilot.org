@@ -233,15 +233,7 @@ header
     background-size cover
     text-transform uppercase
 
-    a, .highlight
-        background white
-        font-size inherit
-        text-transform uppercase
-        color blue
 
-    h2
-        a
-            padding 0px
 
     a
         padding 5px
@@ -264,7 +256,6 @@ header
                 color white
                 background skyblue
 
-
     &.grey
         background grey1
 
@@ -275,6 +266,35 @@ header
     &.blue
         background blue
         color white
+
+    &.image
+        padding-top 110px
+        padding-right 40px
+        padding-bottom 30px
+        min-height 360px
+        background-position center center
+        background-size cover
+        text-transform uppercase
+        color white
+
+        h2
+            text-transform none
+            font-weight 400
+            line-height 1.4
+            font-size 65px
+            text-shadow 2px 2px 0 black
+            a
+                color white
+
+        a
+            padding 5px
+
+        span
+            font-size 24px
+            text-transform none
+
+        .highlight
+            font-size inherit
 
 .content
     column 8
