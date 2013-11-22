@@ -24,7 +24,7 @@ layout: default
                 p Pilot is run by a group of college and high school students who are passionate about encouraging and providing young people with the skills to build products and start businesses.
 
             .people
-                each person in getCollection('documents').findAll({where: 0}, [{title: 1}, {name: -1}]).toJSON()
+                each person in getCollection('documents').findAll({where: 0}, [{title: -1}, {name: -1}]).toJSON()
                     include partials/member
                 each person in getCollection('documents').findAll({where: 'San Francisco'}).toJSON()
                     include partials/member
