@@ -1,6 +1,6 @@
 ---
 name: Gabe Boning
-title: Digital Director
+title: Brand Director
 image: gabe.jpg
 where: 0
 order: 0
