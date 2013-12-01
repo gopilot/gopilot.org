@@ -97,10 +97,9 @@ h1
 
 
 h2
-    font-size 97px
-    line-height 126px
-    font-weight normal
-    text-transform uppercase
+    font-size 65px
+    line-height 1.4
+    font-weight 400
     margin 0
 
 h3 
@@ -109,11 +108,15 @@ h3
     font-weight 200
     margin-bottom .4em
 
+    .highlight
+        font-weight 400
+        text-transform uppercase
 h3,h4
     font-weight 200
 
 p
     font-family "DIN"
+    margin 1em 0
 
 .wrap
     margin 0 0px 0 300px
@@ -124,11 +127,117 @@ p
     font-size 34px
     margin 0px auto
 
+
+.small
+    font-size 15px
+
 .center
     text-align center
 
 .uppercase
     text-transform uppercase
+
+.highlight
+    background white
+    color blue
+    padding 4px 9px 6px 9px
+
+.box
+    background-size cover
+    background-position center center
+    padding 50px 0 50px 0
+    h3:first-child
+        margin-top 0
+    &.white
+        h1
+            margin-top 15px
+            text-transform uppercase
+            a
+                color white
+                background skyblue
+
+    &.grey
+        background grey1
+
+    &.grey2
+        background greyblue1
+        color white
+
+    &.dark
+        background grey2
+        color white
+
+    &.blue
+        background blue
+        color white
+
+    &.image
+        padding-top 110px
+        padding-right 40px
+        padding-bottom 30px
+        min-height 340px
+        background-position center center
+        background-size cover
+        color white
+
+        p
+            text-shadow 1px 1px 0 black
+            font-size 30px
+            margin 0
+        h2
+            text-shadow 2px 2px 0 black
+
+            .highlight
+                text-shadow none
+            a
+                color white
+
+        a
+            padding 5px
+            text-transform uppercase
+
+            &.highlight
+                color grey2
+                padding 5px 9px 4px 9px
+                border-bottom 0px
+
+                &:hover
+                    background blue
+                    color white
+
+        span
+            font-size 24px
+            text-transform none
+
+        .highlight
+            font-size inherit
+
+.content
+    max-width 800px
+
+#leader
+    padding-top 110px
+    padding-right 40px
+    padding-bottom 30px
+    min-height 360px
+
+    &.small
+        padding 40px 40px 40px 0
+        min-height 0
+
+    &.nomin
+        min-height 0
+        padding-bottom 110px
+
+    h2
+        font-size 96px
+        line-height 1.1
+        padding-right 50px
+        margin-bottom 15px
+
+        &.lite
+            font-weight 100
+
 
 header
     header_color = blue
@@ -230,94 +339,6 @@ header
             -webkit-filter:blur(5px)
 
 
-#leader
-    padding-top 110px
-    padding-right 40px
-    padding-bottom 30px
-    min-height 360px
-    background-position center center
-    background-size cover
-    text-transform uppercase
-    h2
-        font-size 96px
-        line-height 1.1
-        padding-right 50px
-        margin-bottom 15px
-
-
-
-    a
-        padding 5px
-
-    span
-        font-size 24px
-        text-transform none
-
-.box
-    background-size cover
-    background-position center center
-    padding 50px 0 50px 0
-    h3:first-child
-        margin-top 0
-    &.white
-        h1
-            margin-top 15px
-            text-transform uppercase
-            a
-                color white
-                background skyblue
-
-    &.grey
-        background grey1
-
-    &.dark
-        background grey2
-        color white
-
-    &.blue
-        background blue
-        color white
-
-    &.image
-        padding-top 110px
-        padding-right 40px
-        padding-bottom 30px
-        min-height 360px
-        background-position center center
-        background-size cover
-        text-transform uppercase
-        color white
-
-        h2
-            text-transform none
-            font-weight 400
-            line-height 1.4
-            font-size 65px
-            text-shadow 2px 2px 0 black
-            a
-                color white
-
-        a
-            padding 5px
-
-        span
-            font-size 24px
-            text-transform none
-
-        .highlight
-            font-size inherit
-
-.content
-    column 8
-
-aside
-    column 4
-    font-size 19px
-
-    h4
-        font-size 24px
-        font-weight 400
-        margin-top .7em
 
 .people
     margin-top 2em
@@ -410,30 +431,6 @@ div.image-bg
             
 
 
-.involvetype
-    column 6
-    box-sizing border-box
-    padding-right 30px
-    margin-bottom 50px
-    clearfix()
-
-    h4
-        text-transform uppercase
-        font-size 59px
-        margin-top 0
-        font-weight 400
-        margin-bottom 0
-
-    h5
-        font-size 35px
-        font-weight 200
-        margin-bottom 18px
-        margin-top 0
-
-
-    a
-        text-transform uppercase
-        font-weight 400
 .box.head
     padding 20px 0 1px 0
     h3
@@ -457,16 +454,19 @@ div.image-bg
     h4, p
         color white
         font-weight 400
-        text-shadow 0 0 8px black
+        font-size 29px
+        text-shadow 1px 1px 0 black
 
     p
         margin-top 0
     h2
         margin-top 0
         font-family ArvilSans
+        line-height 1
 
         a
-            padding 0px 5px 0 5px
+            padding 0 20px
+            padding-left 18px
             font-size 160px
             background white
 
