@@ -1,8 +1,8 @@
 ---
 title: Boston
-link: http://eepurl.com/FrjKP
-occurs: To Be Announced
-date: 1/1/2015
+link: http://blueprint.hackmit.org
+occurs: February 22, 2014
+date: 2/14/2014
 image: boston.jpg
 order: 4
 ---

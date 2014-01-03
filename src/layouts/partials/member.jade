@@ -2,9 +2,11 @@
     .info
         h3= person.name
         if person.regional
-            h4= person.title +", " + person.where
+            h4= person.title +", " + person.where + " | "
+                a(href="mailto:"+person.email)=person.email
         else
-            h4= person.title 
+            h4= person.title + " | " 
+                a(href="mailto:"+person.email)=person.email
 
     img(src="/img/team/"+person.image)
     .bio

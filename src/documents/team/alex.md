@@ -3,6 +3,7 @@ name: Alex Sands
 title: Co-Founder
 image: alex.jpg
 regional: false
+email: alex@gopilot.org
 where: 0
 order: 0
 ---

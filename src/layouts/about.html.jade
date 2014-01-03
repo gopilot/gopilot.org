@@ -8,14 +8,14 @@ layout: default
         .wrap
             .content
                 h3 About Pilot
-                p Pilot is a national organization focused on giving students the ability to turn their ideas into real apps and products. We believe that with today’s resources, no student should feel that they don’t have the tools to make the products they believe should exist. To accomplish this, we’re pairing these students up with mentors from the top companies across the US and in their local area. We want to demonstrate how innovative and creative students can be, and how what we are learning today will shape our futures. Pilot events will provide students the opportunity to gain valuable feedback and contact with startup and corporate founders and mentors, show off their skills, and compete.
+                p Pilot is a national organization focused on giving students the ability to turn their ideas in real apps and products. We believe that with today’s resources, no student should feel that they don’t have the tools to make the products they believe should exist. To accomplish this, we’re pairing these students up with mentors from the top companies across the US and in their local area. We want to demonstrate how innovative and creative students can be, and how what we are learning today will shape our futures. Pilot events will provide students the opportunity to gain valuable feedback and contact with startup and corporate founders and mentors, show off their skills, and compete. 
 
 
     .box.dark
         .wrap
             .content
                 h3 The Pilot Manifesto
-                p This is for the creators. The makers, The builders. The innovators. The students who can’t sit still. The ones who dream of forming the future, not just living in it. Here is your playground. Your laboratory. Here is where you can bring your ideas to life. Escape from the classroom. Pioneer a new path. Because this isn’t about a better education. It’s a whole new system.
+                p This is for the creators. The makers. The builders. The innovators. The students who can’t sit still. The ones who dream of forming the future, not just living in it. Here is your playground. Your laboratory. Here is where you can bring your ideas to life. Escape from the classroom. Pioneer a new path. Because this isn’t about a better education. It’s a whole new system.
     
     .box.white
         .wrap
@@ -24,7 +24,7 @@ layout: default
                 p Pilot is run by a group of college and high school students who are passionate about encouraging and providing young people with the skills to build products and start businesses.
 
             .people
-                each person in getCollection('documents').findAll({where: 0}, [{title: -1}, {name: -1}]).toJSON()
+                each person in getCollection('documents').findAll({where: 0}, [{order: 1}, {title: -1}, {name: -1}]).toJSON()
                     include partials/member
                 each person in getCollection('documents').findAll({where: 'San Francisco'}).toJSON()
                     include partials/member
