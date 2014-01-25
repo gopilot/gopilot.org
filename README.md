@@ -16,6 +16,7 @@ If you want to deploy to the GitHub pages site, use
 ```
 docpad deploy-ghpages --env static
 ```
+(Also make sure you've run ```npm install``` to get the docpad GitHub Pages plugin)
 
 ## License
 Copyright &copy; 2013+ All rights reserved.
