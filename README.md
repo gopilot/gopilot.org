@@ -1,4 +1,4 @@
-# Your [DocPad](http://docpad.org) Project
+# gopilot.org
 
 ## First-time set up
 In addition to the remote for this branch, make sure you run 
@@ -16,8 +16,8 @@ If you want to deploy to the GitHub pages site, use
 ```
 docpad deploy-ghpages --env static
 ```
-(Also make sure you've run ```npm install``` to get the docpad GitHub Pages plugin)
+(Also make sure you've run ```npm install``` to get the docpad [GitHub Pages](https://github.com/docpad/docpad-plugin-ghpages) plugin)
 
 ## License
-Copyright &copy; 2013+ All rights reserved.
+Copyright &copy; Pilot, 2013-2014 All rights reserved.
 
