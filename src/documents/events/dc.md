@@ -1,10 +1,8 @@
 ---
 title: Washington D.C.
-link: http://eepurl.com/Frikz
-occurs: To Be Announced (Early 2014)
-date: 4/1/2014
+link: http://dc.gopilot.org
+occurs: March 29-30, 2014
+date: 3/29/2014
 image: dc.jpg
 order: 3
 ---
-
-
