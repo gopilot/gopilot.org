@@ -7,7 +7,7 @@ layout: default
         .wrap
             h3 Upcoming Events <a class="small" href="http://eepurl.com/JhjCv">Subscribe and we'll let you know when we announce new locations ></a>
 
-    each post in getCollection('documents').findAll({relativeOutDirPath: 'events', date: {'$gt': new Date()}}).toJSON()
+    each post in getCollection('documents').findAll({relativeOutDirPath: 'events', date: {'$gt': new Date()}}, [{date: 1}]).toJSON()
         - var bg = "background-image: url('/img/"+post.image+"')"
         .box.white.event(style=bg)
             .wrap

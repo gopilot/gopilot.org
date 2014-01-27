@@ -13,9 +13,9 @@ div#leader.box.image(style='background-image: url(\"img/philly1.jpg\")')
     .box.white.eventshome
         .wrap
             h3.tleft Upcoming Events
-             each post in getCollection('documents').findAll({relativeOutDirPath: 'events', date: {'$gt': new Date()}}).toJSON()
-                h4= post.occurs
-                h2: a(href=post.link)= post.title
+                each post in getCollection('documents').findAll({relativeOutDirPath: 'events', date: {'$gt': new Date()}}, [{date: 1}]).toJSON()
+                    h4= post.occurs
+                    h2: a(href=post.link)= post.title
 
     .box.grey.sponsors
         .wrap
