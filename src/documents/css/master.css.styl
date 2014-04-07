@@ -142,6 +142,9 @@ p
     color blue
     padding 4px 9px 6px 9px
 
+.error
+    color saturate(lighten(red, 30%), 50%)
+
 .box
     background-size cover
     background-position center center
@@ -478,5 +481,58 @@ div.image-bg
 
             span
                 background transparent
+
+hr
+    outline none
+    width 200px
+    border 0px
+    height 1px
+    background grey1
+    box-shadow none
+    margin 30px 0
+
+button
+    background: blue
+    border: 0px
+    padding 5px 10px
+    color white
+    font inherit
+    border 1px solid darken(blue, 15%)
+
+form
+    li
+        margin 10px 0
+
+        label
+            display block
+        input
+            padding 10px
+            width 350px
+            max-width 100%
+            box-sizing border-box
+            border: 1px solid grey1
+            outline: none
+            font-family inherit
+            font-size inherit
+
+
+            &:focus
+                border: 1px solid blue
+                box-shadow: 0 0 5px grey1
+
+        .dollar-sign
+            position relative
+            display block
+            &:before
+                content "$"
+                position absolute
+                top 8px
+                left 10px
+                opacity .3
+                font inherit
+
+            input
+                padding-left 35px
+
 
 @import '_mq.css.styl'
