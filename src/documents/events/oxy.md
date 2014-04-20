@@ -1,8 +1,8 @@
 ---
 title: LA/Occidental
 link: http://oxy.gopilot.org
-occurs: To Be Announced
-date: 3/29/2016
+occurs: June 17
+date: 6/17/2014
 image: oxy.jpg
 order: 0
 ---
