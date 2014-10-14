@@ -79,7 +79,7 @@ var handler = StripeCheckout.configure({
     },
 });
 
-$("#main form").submit(function(e) {
+$("#main #donate").submit(function(e) {
     e.preventDefault();
     total = parseFloat($("#main .donation-amount").val()) * 100;
     handler.open({

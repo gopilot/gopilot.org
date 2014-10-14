@@ -491,13 +491,51 @@ hr
     box-shadow none
     margin 30px 0
 
-button
+button, input[type=submit]
     background: blue
     border: 0px
     padding 5px 10px
     color white
     font inherit
+    font-weight: 100
     border 1px solid darken(blue, 15%)
+    width auto
+
+input, textarea
+    padding 10px
+    width 350px
+    max-width 100%
+    box-sizing border-box
+    border: 1px solid grey1
+    outline: none
+    font-family inherit
+    font-size inherit
+
+
+    &:focus
+        border: 1px solid blue
+        box-shadow: 0 0 5px grey1
+
+textarea
+    width 80%
+
+select
+    width 350px
+    max-width 100%
+    font-size: 19px
+
+.required-message, .error-message, .ss-password-warning
+    display none
+
+.ss-form-entry
+    margin: 15px 0
+.ss-secondary-text
+    font-size: 14px
+    margin-bottom 3px
+.ss-section-title
+    text-transform uppercase
+    font-weight 100
+    font-size: 24px
 
 form
     li
@@ -505,20 +543,6 @@ form
 
         label
             display block
-        input
-            padding 10px
-            width 350px
-            max-width 100%
-            box-sizing border-box
-            border: 1px solid grey1
-            outline: none
-            font-family inherit
-            font-size inherit
-
-
-            &:focus
-                border: 1px solid blue
-                box-shadow: 0 0 5px grey1
 
         .dollar-sign
             position relative

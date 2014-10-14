@@ -1,0 +1,4 @@
+---
+layout: host
+---
+hi
