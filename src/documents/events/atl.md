@@ -1,8 +1,8 @@
 ---
 title: Atlanta
-link: http://eepurl.com/JhjCv
+link: http://atlanta.gopilot.org
 occurs: To Be Announced
-date: 3/29/2019
+date: 3/29/2016
 image: atl.jpg
 order: 0
 ---

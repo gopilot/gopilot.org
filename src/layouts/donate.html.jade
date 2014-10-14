@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+
+#content
+    .box.white
+        .wrap
+            .content
+                h2 Support our cause 
+                .success.large
+
+                form#donate
+                    ul
+                        li.error
+                        li.status
+                        li.large
+                            label Donation amount
+                            span.dollar-sign: input.donation-amount(required, type="number", step="any")
+                        li
+                            label Your email address
+                            input.email(type="email",required)
+                        li
+                            hr
+                            p We will email you a confirmation of your donation.
+                        li.submit
+                            button(type="submit") Donate now >
+                            p.small (Your credit card information will never touch our servers and is processed securely)
+                            p.small Pilot is not a 501c3. Donations are not tax deductible. 
+
+<script src="//cdn.optimizely.com/js/547053798.js"></script>
+
+
+
+
+
+
+
